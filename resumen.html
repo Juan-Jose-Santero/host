@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen HTML</title>
+</head>
+<!-- No se puede poner un header dentro de un header o footer-->
+<body>
+    <section>
+        
+    <header>
+        <h1 id="0">Resumen HTML</h1>
+<!-- Se puede usar <header> dentro de <section> o <article>, pero no debe haber más de uno por cada sección lógica.
+     También se puede tener un <header> general dentro del <body> principal.
+     No se deben anidar múltiples <header> dentro del mismo contenedor sin necesidad. -->
+    </header>
+
+    <div>
+        <p>Párrafo en la etiqueda del div, simplemente es para hacer secciones, no anidar divs innecesarios</p>
+    </div>
+    <article class="post">
+        <h2>Headers</h2>
+        <p>Tenemos desde h1 hasta h6, sirven para crear encabezados, titulos y subtitulos</p> 
+        <h1>Esto es un h1</h1>
+        <h2>Esto es un h2</h2>
+        <h3>Esto es un h3</h3>
+        <h4>Esto es un h4</h4>
+        <h5>Esto es un h5</h5>
+        <h6>Esto es un h6</h6>
+        <hr>
+    </article>
+    <article class="post">
+        <h2>Listas</h2>
+
+    <h3>Listas no ordenadas</h3>
+    <ul>
+        <li>Elemento a</li>
+        <li>Elemento b</li>
+        <li>Elemento c</li>
+        <li>Elemento d</li>
+    </ul>
+
+    <h3>Listas ordenadas</h3>
+    <ol>
+        <li>Elemento a</li>
+        <li>Elemento b</li>
+        <li>Elemento c</li>
+        <li>Elemento d</li>
+    </ol>
+
+    <ol>
+        <li value="0">Elemento a</li>
+        <li>Elemento b</li>
+        <li value="-5">Elemento c</li>
+        <li>Elemento d</li>
+    </ol>
+    <p> Las listas funcionan como los enums de C, se le puede asignar el valor a cada elemento con la palabra value</p>
+    <hr>
+    </article>
+   
+    <article>
+    <h2>Imágenes</h2>
+    
+    <img src="img/Elfo.jpg" width="200" height="400"/>
+    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/01/krusty-payaso.jpg?tf=1200x" width="300" height="300">
+    <img src="img/Sin_barba.jpg" width="400" height="300">
+    <h2>Vínculos</h2>
+    <a href="https://www.google.com">Vinculos cambiando la página</a> 
+    <br>
+    <a target="_blank" href="https://www.google.com">Vinculos con nuevas pestañas</a> 
+    <br>
+    <a href="#0">Utilizando un ancor con la propiedad href se puede ir a un vínculo, en caso de poner #id te lleva al lugar con ese id</a>
+    <br>
+    <a href="#3">Fin</a>
+    <hr>
+    </article>
+
+    <article>
+    <h2>Tablas</h2>
+    <table>
+        <thead>
+            <tr>
+            <th>Producto</th>
+            <th>Precio en €</th>
+            <th>ID</th>
+            <th>Cantidad</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Celular</td>
+                <td>200€</td>
+                <td>001</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Móvil</td>
+                <td>50€</td>
+                <td>002</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Cartera</td>
+                <td>15€</td>
+                <td>003</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Pórtatil</td>
+                <td>600€</td>
+                <td>004</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Micrófono</td>
+                <td>30€</td>
+                <td>005</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>6</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    </article>
+    <article>
+    <h2>Formulario</h2>
+    <form action="/formulario" method="post">
+        <!-- Puede ser por get (URL limitada a 255 caracteres) o post (Igual de seguro)-->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre"placeholder="Soldado payaso">
+        <br>
+        <label for="fecha">Fecha</label>
+        <input type="date" name="fecha" id="fecha">
+        <br>
+        <label for="hora">Hora</label>
+        <input type="time" name="hora" id="hora">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="radio">Radio</label>
+        <input type="radio" name="radio" id="radio" value="Masc">
+        <input type="radio" name="radio" id="radio" value="Fem">
+        <br>
+        <label for="rango">Rango</label>
+        <input type="range" name="rango" id="rango">
+        <br>
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="contraseña" id="contraseña">
+        <br>
+        <label for="archivo">Archivo</label>
+        <input type="file" name="archivo" id="archivo">
+        <br>
+        <label for="decision">Decisión</label>
+        <input type="checkbox" name="decision" id="decision">
+        <br>
+        <label for="mes">Mes</label>
+        <input type="month" name="mes" id="mes">
+        
+        <h3>Botones del formulario</h3>
+        <button type="button">Envios</button>
+        <br>
+        <button type="reset">Reset</button>
+        <br>
+        <button type="submit">Enviar datos</button>
+    </form>   
+    <textarea rows="7"name="comentario" id="comentario"></textarea>
+    <h2>Texto</h2>
+    <p>Este es el párrafo donde <span style="color: coral;"> debe desarrollar </span>el uso de la etiqueta span para poder <br> referirnos a una parte dentro de una etiqueta</p>
+    </article>
+
+    <article> 
+        <h2>Id y class</h2>
+        <p>Si se quiere un identificador para cada uno se usa un id, pero si quiero que varios sigan un estilo o clase se usa class</p>
+    </article>
+    <footer id="3">
+        <hr>
+        <a href="mailto:correo@gmail.com">Contacte a soporte</a>
+    </footer>
+    </section>
+</body>
+</html>
