@@ -1,0 +1,109 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    /* background: linear-gradient(to right ,rgb(97, 85, 85),yellow); */
+    background-color: #fffce5;
+}
+
+#menu{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+}
+#menu a:hover{
+    color: lightsalmon;
+}
+
+#menu a{
+    color: #FFD700;
+}
+
+img{
+    width:15em;
+    border-radius: 10%;
+    border: 2px solid black;
+    
+}
+
+footer{
+    background-color: black;
+    color: #fdf5b0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1em;
+
+}
+footer a{
+    color:#fdf5b0;
+}
+
+.trabajo {
+  display: grid;
+  grid-template-columns:1fr 2fr 1fr; /* tres columnas */
+  place-items: center;
+  align-items: center;     /* alinea verticalmente */
+  gap: 20px;               /* separación entre elementos */
+  margin: 30px auto;
+  background-color: #fdf5b0;
+  border: black solid 2px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1000px; /* ancho máximo para evitar que se extienda demasiado */
+
+
+}
+.trabajo.reverso {
+  direction: rtl;
+}
+.trabajo.reverso .descripcion {
+  direction: ltr;
+}
+
+
+.trabajo img {
+  width: 100%;
+    max-width: 200px;
+  border-radius: 10px;
+  border: 5px solid black;
+}
+description {
+  font-size: 1.2em;
+  color: #000000;
+}
+.trabajo p {
+  max-width: 200px;
+  text-align: center;
+  font-weight: bold;
+}
+
+nav a{
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bold;
+}
+footer a{
+    text-decoration: none;
+    color: #FFD700;
+
+}
+
+@media (max-width: 768px) {
+  .trabajo {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .trabajo.reverso {
+    direction: ltr;
+  }
+}
